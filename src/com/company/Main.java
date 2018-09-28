@@ -15,26 +15,23 @@ public class Main {
         int val;                                //Used to store which char (position) is being used. (Where to take a charAt)
         String output = "";                     //Used to store final output through concatenation
 
-        //For testing purposes only:                        //
         //System.out.println("Dec: " + dec(sub));           //
         //System.out.println("Hex: " + hex(sub));           //
         //System.out.println("Oct: " + oct(sub));           // For testing use only
         //System.out.println("Bin: " + bin(sub));           //
         //System.out.println("ASC: " + sub);                //
 
-        //System.out.println("Please input a word to be encoded");        //
+        System.out.println("Please input a word to be encoded");        //
         wrd = kbin.nextLine();                                          //  Asks user for a word to input and
         place = ran.nextInt(wrd.length()) +1;                           //  finds a random number based on word
         //System.out.println(place);                                      //  length on where to start encoding
         val = place -1;
-
 
         type = ran.nextInt(5) + 1;          //  Finds a random number to determine what encoding (hex, oct, etc.) to start with
         //System.out.println(type);                  //
 
         sub = wrd.charAt(val);  // Takes the char from the string and stores it as "sub"
         //System.out.println(sub);
-
 
         for(int i = 0; i < wrd.length(); i++)                 //Repeats enough times so every char in the string is encoded
         {
@@ -52,9 +49,6 @@ public class Main {
         }
 
         System.out.println("Your phrase: \"" + wrd + "\" is:\n" + output);
-
-
-
 
     }
 
